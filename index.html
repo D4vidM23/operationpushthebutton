@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="parent">
+        <input type="text" id="text1"/>
+        <button id="button1">BUTTON</button>
+    </div>
+    <script>
+        console.log('Wassup Elijah')
+
+        const inputElement = document.getElementById('text1')
+        console.log(inputElement)
+        const buttonElement = document.getElementById('button1')
+        console.log(buttonElement)
+
+        inputElement.addEventListener('change', function(e){
+            console.log(`The value you entered is ${e.target.value}`)
+        })
+            inputElement.addEventListener('input', function(e){
+                console.log(`The value you typed is ${e.target.value}`)
+        })
+
+    </script>
+</body>
+</html>
