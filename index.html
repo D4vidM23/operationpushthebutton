@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>T</title>
 </head>
 <body>
     <div id="parent">
@@ -16,6 +16,8 @@
         console.log(inputElement)
         const buttonElement = document.getElementById('button1')
         console.log(buttonElement)
+        const parentElement = document.getElementById('parent')
+
 
         inputElement.addEventListener('change', function(e){
             console.log(`The value you entered is ${e.target.value}`)
@@ -24,6 +26,37 @@
                 console.log(`The value you typed is ${e.target.value}`)
         })
 
+
+        buttonElement.addEventListener('click', function(e){
+            console.log('You clicked on my button.')
+            e.stopPropagation()
+        })
+        parentElement.addEventListener('click', function(e){
+            console.log('You clicked on the parent containing div.')
+        })
+
+
+        buttonElement.addEventListener('mouseover', function(e){
+            console.log('Your mouse is on my button.')
+            e.stopPropagation()
+        })
+        buttonElement.addEventListener('mouseout', function(e){
+            console.log('Your mouse is no longer on my button.')
+            e.stopPropagation()
+        })
+
+
+        inputElement.addEventListener('focus', function(e){
+            console.log('You focused on the input.')
+        })
+        inputElement.addEventListener('blur', function(e){
+            console.log('You stopped focusing on the input.')
+        })
+
+
+        document.addEventListener('keydown', function(e){
+            console.log(`You just hit the ${e.key} key`)
+        })
     </script>
 </body>
 </html>
