@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Change Contents of an Element Notes+</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
 </head>
 <body>
 
@@ -20,11 +25,12 @@
                         <input type="text" id="last" name="last_name" placeholder="Mama">
                     </div>
 
-                    <p></p>
+    <button name="clear">Clear</button>
+                    <p class="hidden"></p>
                 </div>
-
         </div>
     </div>
+
 
 
 
@@ -32,19 +38,43 @@
     const firstName = document.getElementById('first')
     const lastName = document.getElementById('last')
     const full = document.querySelector('p');
+    const clearButton = document.querySelector('[name="clear"]')
 
     firstName.addEventListener('change',function(e) {
         let first = firstName.value;
         let last = lastName.value;
-        let fullName = `Hello ${first} ${last}!`;
-        full.textContent = fullName;
+        let fullName = `Wassup ${first} ${last}!`;
+        if (fullName.length>1){
+            full.classList.remove("hidden")
+        } else {
+            full.classList.add("hidden")
+        }
+        full.textContent = `Hello ${fullName}!`
     });
     lastName.addEventListener('change',function(e) {
         let first = firstName.value;
         let last = lastName.value;
-        let fullName = `Hello ${first} ${last}!`;
+        let fullName = `G'day ${first} ${last}!`;
         full.textContent = fullName;
     });
+
+    clearButton.addEventListener('click', function(e){
+      firstName.value="";
+      lastName.value="";
+      full.textContent="";
+    })
+
+    function nameCreator(){
+        let first = firstName.value;
+        let last = lastName.value;
+        let fullName = `${first} ${last}`;
+        if (fullName.length>1){
+            full.classList.remove("hidden")
+        } else {
+            full.classList.add("hidden")
+        }
+        full.textContent = `Hello ${fullName}`
+    }
 </script>
 
 </body>

@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
 }
@@ -6,10 +7,11 @@ body{
 }
 
 label {
-display: block;line-height: 1.25rem;
-font-weight: 500;
-font-size: 14px;
-color: #374151;
+    display: block;
+    line-height: 1.25rem;
+    font-weight: 500;
+    font-size: 14px;
+    color: #374151;
 }
 
 input[type="text"], textarea, select{
@@ -28,7 +30,6 @@ fieldset{
     margin-bottom: 16px;
     padding: 12px;
 }
-
 
 fieldset legend{
     font-size: 14px;
