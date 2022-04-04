@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .red{
+            background-color:red;
+        }
+        .green{
+            background-color:green;
+        }
+        .blue{
+            background-color:blue;
+        }
+        .pink{
+            color:pink;
+        }
+        .teal{
+            color:teal;
+        }
+        .purple{
+            color:purple;
+        }
+        .brucky{
+            color: #bb2877;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+         <p> Lorem, you is not funny, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+             labore et dolore magna aliqua. Pharetra et fookinhel neque ornare aenean euismod elementum
+             nisi. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Sit amet dictum sit
+             amet justo. Vitae et leo duis ut diam quam nulla.</p>
+            <div class="row">
+                <h3>Background</h3>
+                <button id="1">Red</button>
+                <button id="2">Green</button>
+                <button id="3">Blue</button>
+            </div>
+            <div class="row">
+                <h3>Text</h3>
+                <button id="4">Pink</button>
+                <button id="5">Teal</button>
+                <button id="6">Purple</button>
+            </div>
+            <button id="clear">Clear</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        const content = document.querySelector('.content')
+        const red = document.getElementById('1')
+        const green = document.getElementById('2')
+        const blue = document.getElementById('3')
+
+        const pink = document.getElementById('4')
+        const teal = document.getElementById('5')
+        const purple = document.getElementById('6')
+
+        const clearButton = document.getElementById('clear')
+
+        red.addEventListener('click', function(e){
+            removeBGColor();
+            content.classList.add('red');
+        });
+
+        green.addEventListener('click', function(e){
+            removeBGColor();
+            content.classList.add('green');
+        });
+
+        blue.addEventListener('click', function(e){
+            removeBGColor();
+            content.classList.add('blue');
+        });
+
+        pink.addEventListener('click',function(e){
+            removeTextColor();
+            content.classList.add('pink');
+        });
+
+        teal.addEventListener('click',function(e){
+            removeTextColor();
+            content.classList.add('teal');
+        });
+
+        purple.addEventListener('click',function(e){
+            removeTextColor();
+            content.classList.add('purple');
+        });
+
+        clear.addEventListener('click',function(e){
+            removeTextColor();
+            removeBGColor();
+            });
+
+
+        function removeBGColor(){
+            content.classList.remove('red');
+            content.classList.remove('green');
+            content.classList.remove('blue');
+        }
+
+        function removeTextColor(){
+            content.classList.remove('pink');
+            content.classList.remove('teal');
+            content.classList.remove('purple');
+        }
+
+
+    </script>
+
+</body>
+</html>
