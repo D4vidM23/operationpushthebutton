@@ -27,6 +27,9 @@
         .brucky{
             color: #bb2877;
         }
+        .bando{
+            color: #d1d5db;
+        }
     </style>
 </head>
 <body>
@@ -41,6 +44,8 @@
                 <button id="1">Red</button>
                 <button id="2">Green</button>
                 <button id="3">Blue</button>
+                <button id="8">White</button>
+                <button id="7">Hot Pink</button>
             </div>
             <div class="row">
                 <h3>Text</h3>
@@ -59,6 +64,8 @@
         const red = document.getElementById('1')
         const green = document.getElementById('2')
         const blue = document.getElementById('3')
+        const bando = document.getElementById('8')
+        const hotpink = document.getElementById('7')
 
         const pink = document.getElementById('4')
         const teal = document.getElementById('5')
@@ -94,6 +101,16 @@
         purple.addEventListener('click',function(e){
             removeTextColor();
             content.classList.add('purple');
+        });
+
+        bando.addEventListener('click',function(e){
+            removeTextColor();
+            content.classList.add('bando');
+        });
+
+        hotpink.addEventListener('click',function(e){
+            removeTextColor();
+            content.classList.add('brucky');
         });
 
         clear.addEventListener('click',function(e){
