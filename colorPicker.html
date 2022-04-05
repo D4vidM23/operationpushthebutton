@@ -25,10 +25,10 @@
             color:purple;
         }
         .brucky{
-            color: #bb2877;
+            background-color: #bb2877;
         }
         .bando{
-            color: #d1d5db;
+            background-color: #d1d5db;
         }
     </style>
 </head>
@@ -104,12 +104,12 @@
         });
 
         bando.addEventListener('click',function(e){
-            removeTextColor();
+            removeBGColor();
             content.classList.add('bando');
         });
 
         hotpink.addEventListener('click',function(e){
-            removeTextColor();
+            removeBGColor();
             content.classList.add('brucky');
         });
 
@@ -123,6 +123,8 @@
             content.classList.remove('red');
             content.classList.remove('green');
             content.classList.remove('blue');
+            content.classList.remove('hotpink');
+            content.classList.remove('bando');
         }
 
         function removeTextColor(){
