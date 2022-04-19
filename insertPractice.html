@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h3>Do I know you?</h3>
+            <h4>I would like to speak to the manager.</h4>
+        </div>
+    </div>
+
+<script>
+    const content = document.querySelector('.content');
+    content.innerHTML = '<h1 id="lose">I love rObloX ZELDA</h1> <h4>I love BoBUx</h4>'
+
+    const zelda = document.createElement('h1');
+    zelda.innerHTML = 'I love roBloX ZELDA';
+    content.appendChild(zelda);
+
+    const fort = document.createElement('h1');
+    fort.innerHTML = 'I love ForTNitE ZELDA';
+    content.appendChild(fort);
+
+    const genshin = document.createElement('h1');
+    genshin.innerHTML = 'I love GensHIn ZELDA';
+    content.appendChild(genshin);
+
+    const amogus = document.createElement('h1');
+    amogus.innerHTML = 'I love aMonG uS ZELDA';
+    content.appendChild(amogus);
+
+
+    const food = document.createElement('h1');
+    food.innerHTML = 'I love ice cubes';
+    content.insertAdjacentElement('afterend', food);
+
+    const unwantedElement = document.querySelector('h4');
+    unwantedElement.remove();
+
+    const unwantedElement2 = document.querySelector('#lose');
+    unwantedElement2.remove();
+</script>
+</body>
+</html>
