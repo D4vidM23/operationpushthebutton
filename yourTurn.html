@@ -4,50 +4,46 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-
-            <div>
-                <label for="first">First Name</label>
-                <input type="text" id="first" name="first_name" placeholder="Joe">
-            </div>
-
-            <div>
-                <label for="last">Last Name</label>
-                <input type="text" id="last" name="last_name" placeholder="Mama">
-            </div>
-
-            <button id='button'> Enter </button>
-
-            <div class="text">
-            </div>
-
+<div class="container">
+    <div class="content">
+        <div>
+            <label for="first">First Name</label>
+            <input type="text" id="first" name="first_name" style="width: 150px;">
+        </div>
+        <div>
+            <label for="last">Last name</label>
+            <input type="text" id="last" name="last_name" style="width: 150px;">
+        </div>
+        <button id="button">Enter</button>
+        <div id="text">
         </div>
     </div>
-
-
-
+</div>
 <script>
-    const button = document.querySelector('button')
-    const firstName = document.getElementById('first')
-    const lastName = document.getElementById('last')
-    const text = document.getElementById('text')
+    const firstName = document.getElementById('first');
+    const lastName = document.getElementById('last');
+    const button = document.querySelector('button');
+    const text = document.getElementById('text');
 
-    function nameCreator(){
-        let first = firstName.value;
-        let last = lastName.value;
-        let fullName = `Sup ${first} ${last}`;
-        return fullName;
-    }
 
-    button.addEventListener('click', function(){
+    button.addEventListener('click', function(e){
         const name = document.createElement('h1');
         name.innerHTML = nameCreator();
         text.insertAdjacentElement('afterbegin', name);
-    })
+    });
+    function nameCreator(){
+        let first = firstName.value;
+        let last = lastName.value;
+        let fullName = `Hello ${first} ${last}!`;
+        return fullName;
+    }
 </script>
-
 </body>
 </html>
