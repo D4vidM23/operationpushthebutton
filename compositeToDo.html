@@ -84,14 +84,14 @@
         action.textContent = "Mark Complete";
         action.addEventListener('click', function(){
             newRow.remove();
-            addItemToIncompleteTable(toDoItem);
+            addItemToCompleteTable(toDoItem);
         })
         actionTag.appendChild(action);
         newRow.appendChild(actionTag);
         incomplete.appendChild(newRow);
     }
 
-    function addItemToIncompleteTable(toDoItem) {
+    function addItemToCompleteTable(toDoItem) {
         let newRow = document.createElement('tr');
         let descriptionTag = document.createElement('td');
         descriptionTag.textContent = toDoItem;
@@ -105,7 +105,7 @@
         })
         actionTag.appendChild(action);
         newRow.appendChild(actionTag);
-        incomplete.appendChild(newRow);
+        complete.appendChild(newRow);
     }
 </script>
 
