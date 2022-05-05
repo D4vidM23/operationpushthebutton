@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Handomizer</title>
+    <style>
+        .pink {
+            background-color: #bb2877;
+        }
+        .white {
+            background-color: #e7e7e7;
+        }
+        .lightpink {
+            background-color: #f590d2;
+        }
+        .lam {
+            background-color: #4188c2;
+        }
+        .shazam {
+            background-color: #7bd7a9;
+        }
+
+    </style>
+</head>
+
+<body>
+ <div class="container">
+     <div class="content">
+         <button id="trigger"> Disappearing Button</button>
+
+         <div class="color">
+             <button id="picker">Change Color</button>
+         </div>
+
+
+
+
+     </div>
+ </div>
+</body>
+
+<script>
+    const content = document.querySelector('.content')
+    const myButton = document.getElementById("trigger");
+    const changer = document.getElementById("picker")
+    let interval;
+    const colorList=['pink','white','lightpink','lam','shazam']
+
+    myButton.addEventListener('click', function(){
+        setTimeout(function(){
+            myButton.remove();
+        }, 3000);
+    })
+
+    changer.addEventListener('click', function(){
+        if(!interval){
+            interval=setInterval(function(){
+                console.log(changer.colorList)
+            },5000)
+        }
+    })
+
+
+</script>
+
+</html>
