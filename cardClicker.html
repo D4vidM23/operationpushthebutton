@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click Card Game Before It Crashes Your PC!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cardList{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 16px;
+    }
+    .card{
+      width:300px;
+      height: 400px;
+      border-radius:12px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color:white;
+    }
+    .active{
+      background-color: #e8520e;
+    }
+    .inactive{
+      background-color: #c51111;
+      color:black;
+    }
+    .content {
+      width: 1400px;
+    }
+    .score {
+      font-size: 24px;
+    }
+    .virus{
+        background-color: #96bb28;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <div class="score">Score: -2</div>
+
+    <div class="mic"></div>
+
+    <div class="cardList">
+
+    </div>
+  </div>
+</div>
+
+<script src="index.js"> </script>
+</body>
+</html>
